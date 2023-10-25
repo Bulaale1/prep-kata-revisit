@@ -1,0 +1,14 @@
+const findMissingNumber = function(arr) {
+  var missing_number = 0;
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i + 1] - arr[i] > 1) {
+      missing_number = arr[i] + 1
+    }
+  }
+  return missing_number
+}
+console.log(
+  findMissingNumber([1, 2, 3, 4, 6, 7, 8, 9, 10]),
+  findMissingNumber([100, 101, 102, 103, 105, 106, 107]),
+  findMissingNumber([-3, -2, -1, 1, 2, 3])
+);
